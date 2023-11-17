@@ -4,6 +4,7 @@ using Verlag;
 
 namespace VerlagTests
 {
+<<<<<<< HEAD
     [TestClass]
     public class BuchTests
     {
@@ -150,8 +151,5 @@ namespace VerlagTests
             //Assert
             Assert.AreEqual(isbn10, b.ISBN10);
         }
-
-
-
     }
 }
