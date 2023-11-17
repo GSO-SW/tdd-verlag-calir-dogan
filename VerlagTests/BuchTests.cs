@@ -105,5 +105,21 @@ namespace VerlagTests
 			//Act
 			Buch b = new Buch(unerlaubtesZeichen, "titel");
 		}
-	}
+        public void Isbn_kanneingegebenwerden_undbekommtprufziffer()
+        {
+            //Arrange
+            string isbn_ohneprufziffer= "978-377043614";
+			string isbn_mitprufziffer = "978-3770436149";
+            string autor = "Thomas";
+
+            //Act
+            Buch b = new Buch(autor, "titel");
+			b.isbn = isbn_ohneprufziffer;
+
+			//Assert
+			Assert.AreEqual(isbn_ohneprufziffer, b.isbn);
+            Assert.AreEqual(isbn_mitprufziffer, b.isbn);
+
+        }
+    }
 }
