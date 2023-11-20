@@ -4,7 +4,6 @@ using Verlag;
 
 namespace VerlagTests
 {
-<<<<<<< HEAD
     [TestClass]
     public class BuchTests
     {
@@ -118,7 +117,7 @@ namespace VerlagTests
             b.ISBN = isbn;
 
             //Assert
-            Assert.AreEqual(isbn, b.ISBN);
+            Assert.AreEqual(isbn.Trim(new char[] {' ', '-'}), b.ISBN);
         }
 
         [TestMethod]
@@ -126,15 +125,14 @@ namespace VerlagTests
         {
             //Arrange
             string isbn_ohneprufziffer = "978-377043614";
-            string isbn_mitprufziffer = "978-3770436149";
+            string isbn_mitprufziffer = "9783770436149";
             Buch b = new Buch("Autor", "titel");
 
             //Act
             b.ISBN = isbn_ohneprufziffer;
 
             //Assert
-            Assert.AreEqual(isbn_ohneprufziffer, b.ISBN);
-            Assert.AreEqual(isbn_mitprufziffer, b.ISBN);
+            Assert.AreEqual(isbn_mitprufziffer., b.ISBN);
         }
 
         [TestMethod]
