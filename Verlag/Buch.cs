@@ -21,14 +21,8 @@ namespace Verlag
         {
             this.autor = autor;
             this.titel = titel;
-            if (auflage <= 0)
-            {
-                throw new ArgumentOutOfRangeException("Auflage darf nicht kleiner oder gleich Null sein");
-            }
-            else
-            {
-                this.auflage = auflage;
-            }
+            Auflage = auflage;
+            
         }
 
 
